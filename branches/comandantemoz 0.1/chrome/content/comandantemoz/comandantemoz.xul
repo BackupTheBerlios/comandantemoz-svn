@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="comandantemoz.css" type="text/css"?>
+
+<?xul-overlay href="chrome://comandantemoz/content/menuoverlay.xul"?>
+
+<!DOCTYPE window [
+<!ENTITY % comandantemozDTD SYSTEM "chrome://comandantemoz/locale/comandantemoz.dtd">
+%comandantemozDTD;
+]>
+
+<window
+   title      = "&window.title;"
+   id         = "comandantemoz-main-window"
+   xmlns      = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+   width      = "640"
+   height     = "480"
+   orient     = "vertical"
+   persist    = "screenX screenY width height sizemode">
+
+<script type="application/x-javascript" src="comandantemoz.js"/>
+
+
+<keyset id="mainkeys"/>
+<commandset id="maincommands"/>
+<stringbundleset id="mainstrings"/>
+
+<toolbox id="main-toolbox">
+	<menubar id="menu"/>
+</toolbox>
+
+
+<textbox id="document" multiline="true" flex="1"/>
+
+</window>

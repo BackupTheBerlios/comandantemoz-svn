@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+
+<?xul-overlay href="chrome://global/content/globalOverlay.xul"?>
+<?xul-overlay href="chrome://communicator/content/utilityOverlay.xul"?>
+<?xul-overlay href="chrome://communicator/content/tasksOverlay.xul"?>
+
+<!DOCTYPE window [
+<!ENTITY % brandDTD SYSTEM "chrome://global/locale/brand.dtd" >
+%brandDTD;
+<!ENTITY % comandantemozDTD SYSTEM "chrome://comandantemoz/locale/comandantemoz.dtd" >
+%comandantemozDTD;
+]>
+
+<overlay id="menuoverlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+<commandset id="maincommands">
+  <commandset id="globalEditMenuItems"/>
+  <commandset id="selectEditMenuItems"/>
+  <commandset id="undoEditMenuItems"/>
+  <commandset id="clipboardEditMenuItems"/>
+  <command id="cmd_undo"/>
+  <command id="cmd_redo"/>
+  <command id="cmd_cut"/>
+  <command id="cmd_copy"/>
+  <command id="cmd_paste"/>
+  <command id="cmd_delete"/>
+  <command id="cmd_selectAll"/>
+  <commandset id="tasksCommands"/>
+
+  <command id="menu-file-close:command" oncommand="closeWindow();"/>
+</commandset>
+
+<keyset id="mainkeys">
+  <key id="key_undo"/>
+  <key id="key_redo"/>
+  <key id="key_cut"/>
+  <key id="key_copy"/>
+  <key id="key_paste"/>
+  <key id="key_delete"/>
+  <key id="key_selectAll"/>
+  <keyset id="tasksKeys"/>
+
+  <key
+     id        =  "menu-file-close:key"
+     key       = "&menu-file-close:key;"
+     observes  =  "menu-file-close:command"
+     modifiers =  "accel" />
+</keyset>
+
+
+<menubar id="menu">
+  <menu id="menu-file" label="&menu-file:label;" accesskey="&menu-file:accesskey;">
+    <menupopup id="menu-file-popup">
+      <menuitem
+         id        =  "menu-file-close"
+         key       =  "menu-file-close:key"
+         label     = "&menu-file-close:label;"
+         command   =  "menu-file-close:command"
+         accesskey = "&menu-file-close:accesskey;"/>
+    </menupopup>
+  </menu>
+
+  <menu id="menu_Edit">
+    <menupopup>
+      <menuitem id="menu_undo"/>
+      <menuitem id="menu_redo"/>
+      <menuseparator/>
+      <menuitem id="menu_cut"/>
+      <menuitem id="menu_copy"/>
+      <menuitem id="menu_paste"/>
+      <menuitem id="menu_delete"/>
+      <menuseparator/>
+      <menuitem id="menu_selectAll"/>
+    </menupopup>
+  </menu>  
+
+  <menu id="tasksMenu"/>
+  <menu id="windowMenu"/>
+  <menu id="menu_Help"/> 
+</menubar>
+
+</overlay>

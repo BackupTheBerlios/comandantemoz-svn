@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE window SYSTEM "chrome://comandantemoz/locale/comandantemozOverlay.dtd"> 
+
+<overlay id="comandantemozOverlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+<script type="application/x-javascript">
+
+function runComandanteMoz()
+{
+	window.openDialog('chrome://comandantemoz/content/', '_blank', 'chrome,dialog=no');
+}
+	
+</script>
+
+<menupopup id="windowPopup">
+	<menuitem label="&menu-tasks-comandantemoz:label;" oncommand="runComandanteMoz();" insertbefore="sep-window-list"/>
+</menupopup>
+
+</overlay>
