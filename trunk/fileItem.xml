@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<bindings xmlns="http://www.mozilla.org/xbl"
+		xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+		xmlns:xbl="http://www.mozilla.org/xbl">
+
+	<binding id="fileItem" extends="chrome://global/content/bindings/general.xml#basetext">
+		<content>
+			<children includes=""/>
+			<!-- <children includes="observes|template|menupopup|tooltip"/> -->
+			<xul:box class="box-inherit fileItem-box" xbl:inherits="align,dir,pack,orient"
+					align="center" pack="center">
+				<xul:image xbl:inherits="src=image"/>
+		      	<xul:label xbl:inherits="value=label,accesskey,crop"/>
+			</xul:box>
+			<!-- TODO: hay que agregar la posibilidad de apretar teclas de flechitas
+					para moverse entre elementos. copiar el ejemplo de 'button' -->
+		</content>
+	</binding>
+</bindings>

@@ -1,0 +1,13 @@
+fileItem {
+  -moz-binding: url("fileItem.xml#fileItem");
+  -moz-box-orient: vertical;
+  /* TODO: estaria bueno usar 'orient' en lugar de '-moz-box-orient', tal como hace button */
+  -moz-user-focus: normal;
+}
+
+fileItem:focus > .fileItem-box {
+  /* TODO: habría que cambiar alguna opción del aspecto como para que no se hundan los 
+	fileItem a la hora de seleccionarlos; quita prolijidad */
+  /* TODO: también deberían quedar seleccionados los items una vez que reciben el foco */
+  border: 1px dotted;
+}

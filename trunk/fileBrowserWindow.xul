@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!-- <?xml-stylesheet href="chrome://global/skin/" type="text/css"?> -->
+<?xml-stylesheet href="fileBrowserWindow.css" type="text/css"?>
+
+<window id="fileBrowserWindow"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" 
+        style="overflow:autoscroll;">
+
+    <script type="application/x-javascript" src="fileBrowserWindow.js" />
+
+    <browser id="content" type="content-primary" src="content.xul" flex="1"/>
+
+
+</window>

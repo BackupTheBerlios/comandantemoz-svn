@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="fileBrowserWindow.css" type="text/css"?>
+<?xml-stylesheet href="fileItem.css" type="text/css"?>
+
+<window id="contentWindow"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        orient="horizontal"
+        align="baseline"
+        style="overflow:autoscroll;">
+
+	<script type="application/x-javascript" src="contentWindow.js" />
+
+	<button class="fileItem" label="file1" image="icos/Be_AIM.ico" tooltiptext="hola"/>
+<!--	<button class="fileItem" label="file2" image="icos/BeOS_17_Apple_Studio_Display.ico" tooltiptext="julette"/>
+	<button class="fileItem" label="file3" image="icos/BeOS_Acrobat.ico" tooltiptext="¿qué te parece?"/>
+	<button label="file4" image="icos/BeOS_Acrobat_1.ico" orient="vertical"/>
+-->	
+	<fileItem id="iesh" label="soy un fileItem" image="icos/BeOS_ans.ico" tooltiptext="gotcha!"/>
+
+</window>
